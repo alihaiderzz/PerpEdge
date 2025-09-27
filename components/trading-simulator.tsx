@@ -8,25 +8,27 @@ export function TradingSimulator() {
     <section id="tools" className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 gradient-text">$100K Virtual Perpetual Contracts Simulator</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 gradient-text">$100K Virtual Perpetual Contracts Simulator</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Practice perpetual contracts trading with $100K virtual money using real market data. Perfect your derivatives strategies before risking real capital.
           </p>
-          <div className="mt-4 flex items-center justify-center gap-4 text-sm text-muted-foreground">
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-sm text-muted-foreground">
             <span>🎯 Real-time perpetual contracts data</span>
+            <span className="hidden sm:inline">•</span>
             <span>💰 $100K virtual balance</span>
+            <span className="hidden sm:inline">•</span>
             <span>📊 Professional derivatives tools</span>
           </div>
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <Card className="p-8 bg-card border-border crypto-glow-green">
-            <div className="grid lg:grid-cols-2 gap-8">
+          <Card className="p-4 sm:p-6 lg:p-8 bg-card border-border crypto-glow-green">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
               {/* Trading Interface */}
               <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-bold gradient-text">BTC/USDT Perpetual</h3>
-                  <Badge className="bg-crypto-purple/20 text-crypto-purple border-crypto-purple/30 crypto-pulse">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                  <h3 className="text-xl sm:text-2xl font-bold gradient-text">BTC/USDT Perpetual</h3>
+                  <Badge className="bg-crypto-purple/20 text-crypto-purple border-crypto-purple/30 crypto-pulse text-xs sm:text-sm">
                     LIVE DEMO
                   </Badge>
                 </div>

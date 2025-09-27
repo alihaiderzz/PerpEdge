@@ -31,14 +31,14 @@ export function PricingSection() {
           <Badge className="bg-crypto-green/20 text-crypto-green border-crypto-green/30 mb-6">
             🔥 ONE PLAN, ONE PRICE
           </Badge>
-          <h2 className="text-4xl font-bold mb-4 gradient-text">Ready to Start Your Trading Success?</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 gradient-text">Ready to Start Your Trading Success?</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             {pricingPlan.description}
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="p-12 bg-card border-crypto-green/30 crypto-glow-green relative">
+          <Card className="p-6 sm:p-8 lg:p-12 bg-card border-crypto-green/30 crypto-glow-green relative">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <Badge className="bg-crypto-green text-crypto-green-foreground px-6 py-2">
                 <Crown className="w-4 h-4 mr-2" />
@@ -47,20 +47,20 @@ export function PricingSection() {
             </div>
 
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">{pricingPlan.name}</h3>
-              <p className="text-lg text-muted-foreground mb-8">{pricingPlan.description}</p>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4">{pricingPlan.name}</h3>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8">{pricingPlan.description}</p>
               
               <div className="mb-8">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-6">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-crypto-green">${pricingPlan.monthlyPrice.toLocaleString()}</div>
+                    <div className="text-3xl sm:text-4xl font-bold text-crypto-green">${pricingPlan.monthlyPrice.toLocaleString()}</div>
                     <div className="text-sm text-muted-foreground">per month</div>
                   </div>
-                  <div className="text-2xl text-muted-foreground hidden md:block">OR</div>
+                  <div className="text-lg sm:text-xl text-muted-foreground hidden md:block">OR</div>
                   <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 mb-1">
-                      <span className="text-4xl font-bold text-crypto-green">${pricingPlan.yearlyPrice.toLocaleString()}</span>
-                      <span className="text-lg text-muted-foreground line-through">${pricingPlan.yearlyOriginalPrice.toLocaleString()}</span>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 mb-1">
+                      <span className="text-3xl sm:text-4xl font-bold text-crypto-green">${pricingPlan.yearlyPrice.toLocaleString()}</span>
+                      <span className="text-base sm:text-lg text-muted-foreground line-through">${pricingPlan.yearlyOriginalPrice.toLocaleString()}</span>
                     </div>
                     <div className="text-sm text-muted-foreground">per year</div>
                     <div className="text-sm text-crypto-green font-semibold">Save ${(pricingPlan.yearlyOriginalPrice - pricingPlan.yearlyPrice).toLocaleString()}</div>

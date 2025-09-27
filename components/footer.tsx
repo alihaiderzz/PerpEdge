@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-card/50 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -104,9 +104,9 @@ export function Footer() {
               Always do your own research and consider consulting with a financial advisor before making investment decisions.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">© 2025 PerpEdge. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground text-center sm:text-left">© 2025 PerpEdge. All rights reserved.</p>
+            <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
               <a href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Privacy
               </a>

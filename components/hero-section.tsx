@@ -16,22 +16,22 @@ export function HeroSection() {
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-4xl mx-auto">
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-balance">
             Master Perpetual Contracts Trading and Learn How to
             <br />
             <span className="gradient-text">Grow Your Capital</span> — While Controlling Risk
           </h1>
 
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
             Master the same perpetual contracts trading strategies used by professional derivatives traders. Join successful students who've transformed their approach to crypto derivatives.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-crypto-green hover:bg-crypto-green/90 text-crypto-green-foreground crypto-glow-green text-lg px-8 py-4">
+            <Button size="lg" className="bg-crypto-green hover:bg-crypto-green/90 text-crypto-green-foreground crypto-glow-green text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto">
               🚀 Get Started with Your Profitable Journey
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </Button>
-            <Button size="lg" variant="outline" className="border-crypto-gold/50 hover:bg-crypto-gold/10 bg-transparent text-crypto-gold">
+            <Button size="lg" variant="outline" className="border-crypto-gold/50 hover:bg-crypto-gold/10 bg-transparent text-crypto-gold w-full sm:w-auto">
               Download Free Guide
             </Button>
           </div>
@@ -39,7 +39,7 @@ export function HeroSection() {
 
 
           {/* Feature cards */}
-          <div className="grid md:grid-cols-3 gap-6 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-16">
             <Card className="p-6 bg-crypto-green/10 border-crypto-green/20 hover:bg-crypto-green/20 transition-all duration-300 crypto-float">
               <div className="w-12 h-12 bg-crypto-green/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
                 <TrendingUp className="w-6 h-6 text-crypto-green" />

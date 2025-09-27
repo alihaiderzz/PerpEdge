@@ -18,10 +18,10 @@ export default function ToolsPage() {
           
           <div className="container mx-auto relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-balance">
                 <span className="gradient-text">Perpetual Contract Tools</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
+              <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
                 Access our suite of professional-grade perpetual contracts trading tools to maximize your success in the derivatives market.
               </p>
             </div>
@@ -33,7 +33,7 @@ export default function ToolsPage() {
             
             <TradingSimulator />
             
-            <div className="grid lg:grid-cols-2 gap-8 mt-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mt-16">
               <PositionCalculator />
               <FundingTracker />
             </div>
