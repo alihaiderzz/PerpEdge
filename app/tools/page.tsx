@@ -19,9 +19,7 @@ export default function ToolsPage() {
           <div className="container mx-auto relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
-                Master Your
-                <br />
-                <span className="gradient-text">Perpetual Contracts Tools</span>
+                <span className="gradient-text">Perpetual Contract Tools</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
                 Access our suite of professional-grade perpetual contracts trading tools to maximize your success in the derivatives market.
