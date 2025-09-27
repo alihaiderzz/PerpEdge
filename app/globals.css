@@ -1,0 +1,501 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.05 0.02 240);
+  --foreground: oklch(0.98 0.01 240);
+  --card: oklch(0.08 0.02 240);
+  --card-foreground: oklch(0.98 0.01 240);
+  --popover: oklch(0.08 0.02 240);
+  --popover-foreground: oklch(0.98 0.01 240);
+  --primary: oklch(0.6 0.3 15);
+  --primary-foreground: oklch(0.05 0.02 240);
+  --secondary: oklch(0.15 0.02 240);
+  --secondary-foreground: oklch(0.98 0.01 240);
+  --muted: oklch(0.12 0.02 240);
+  --muted-foreground: oklch(0.65 0.01 240);
+  --accent: oklch(0.75 0.15 85);
+  --accent-foreground: oklch(0.05 0.02 240);
+  --destructive: oklch(0.6 0.25 25);
+  --destructive-foreground: oklch(0.98 0.01 240);
+  --border: oklch(0.2 0.02 240);
+  --input: oklch(0.15 0.02 240);
+  --ring: oklch(0.6 0.3 15);
+
+  /* Crypto trading colors */
+  --crypto-green: oklch(0.6 0.3 15);
+  --crypto-green-foreground: oklch(0.05 0.02 240);
+  --crypto-red: oklch(0.65 0.25 25);
+  --crypto-red-foreground: oklch(0.98 0.01 240);
+  --crypto-gold: oklch(0.75 0.15 85);
+  --crypto-gold-foreground: oklch(0.05 0.02 240);
+  --crypto-purple: oklch(0.65 0.2 300);
+  --crypto-purple-foreground: oklch(0.98 0.01 240);
+
+  --chart-1: oklch(0.6 0.3 15);
+  --chart-2: oklch(0.6 0.3 15);
+  --chart-3: oklch(0.65 0.25 25);
+  --chart-4: oklch(0.75 0.15 85);
+  --chart-5: oklch(0.65 0.2 300);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.08 0.02 240);
+  --sidebar-foreground: oklch(0.98 0.01 240);
+  --sidebar-primary: oklch(0.6 0.3 15);
+  --sidebar-primary-foreground: oklch(0.05 0.02 240);
+  --sidebar-accent: oklch(0.15 0.02 240);
+  --sidebar-accent-foreground: oklch(0.98 0.01 240);
+  --sidebar-border: oklch(0.2 0.02 240);
+  --sidebar-ring: oklch(0.6 0.3 15);
+}
+
+.dark {
+  --background: oklch(0.05 0.02 240);
+  --foreground: oklch(0.98 0.01 240);
+  --card: oklch(0.08 0.02 240);
+  --card-foreground: oklch(0.98 0.01 240);
+  --popover: oklch(0.08 0.02 240);
+  --popover-foreground: oklch(0.98 0.01 240);
+  --primary: oklch(0.6 0.3 15);
+  --primary-foreground: oklch(0.05 0.02 240);
+  --secondary: oklch(0.15 0.02 240);
+  --secondary-foreground: oklch(0.98 0.01 240);
+  --muted: oklch(0.12 0.02 240);
+  --muted-foreground: oklch(0.65 0.01 240);
+  --accent: oklch(0.75 0.15 85);
+  --accent-foreground: oklch(0.05 0.02 240);
+  --destructive: oklch(0.6 0.25 25);
+  --destructive-foreground: oklch(0.98 0.01 240);
+  --border: oklch(0.2 0.02 240);
+  --input: oklch(0.15 0.02 240);
+  --ring: oklch(0.6 0.3 15);
+
+  /* Crypto trading colors for dark mode */
+  --crypto-green: oklch(0.6 0.3 15);
+  --crypto-green-foreground: oklch(0.05 0.02 240);
+  --crypto-red: oklch(0.65 0.25 25);
+  --crypto-red-foreground: oklch(0.98 0.01 240);
+  --crypto-gold: oklch(0.75 0.15 85);
+  --crypto-gold-foreground: oklch(0.05 0.02 240);
+  --crypto-purple: oklch(0.65 0.2 300);
+  --crypto-purple-foreground: oklch(0.98 0.01 240);
+
+  --chart-1: oklch(0.6 0.3 15);
+  --chart-2: oklch(0.6 0.3 15);
+  --chart-3: oklch(0.65 0.25 25);
+  --chart-4: oklch(0.75 0.15 85);
+  --chart-5: oklch(0.65 0.2 300);
+  --sidebar: oklch(0.08 0.02 240);
+  --sidebar-foreground: oklch(0.98 0.01 240);
+  --sidebar-primary: oklch(0.6 0.3 15);
+  --sidebar-primary-foreground: oklch(0.05 0.02 240);
+  --sidebar-accent: oklch(0.15 0.02 240);
+  --sidebar-accent-foreground: oklch(0.98 0.01 240);
+  --sidebar-border: oklch(0.2 0.02 240);
+  --sidebar-ring: oklch(0.6 0.3 15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Crypto color utilities */
+  --color-crypto-green: var(--crypto-green);
+  --color-crypto-green-foreground: var(--crypto-green-foreground);
+  --color-crypto-red: var(--crypto-red);
+  --color-crypto-red-foreground: var(--crypto-red-foreground);
+  --color-crypto-gold: var(--crypto-gold);
+  --color-crypto-gold-foreground: var(--crypto-gold-foreground);
+  --color-crypto-purple: var(--crypto-purple);
+  --color-crypto-purple-foreground: var(--crypto-purple-foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Replacing simple animations with intense neon effects */
+/* Neon Color Cycling Animations */
+@keyframes neon-cycle {
+  0% {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+    box-shadow: 0 0 20px #00ffff40, 0 0 40px #00ffff20, 0 0 60px #00ffff10;
+  }
+  16% {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    box-shadow: 0 0 20px #ff00ff40, 0 0 40px #ff00ff20, 0 0 60px #ff00ff10;
+  }
+  33% {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    box-shadow: 0 0 20px #00ff0040, 0 0 40px #00ff0020, 0 0 60px #00ff0010;
+  }
+  50% {
+    color: #ffff00;
+    text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ffff00;
+    box-shadow: 0 0 20px #ffff0040, 0 0 40px #ffff0020, 0 0 60px #ffff0010;
+  }
+  66% {
+    color: #ff4500;
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500;
+    box-shadow: 0 0 20px #ff450040, 0 0 40px #ff450020, 0 0 60px #ff450010;
+  }
+  83% {
+    color: #8a2be2;
+    text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2;
+    box-shadow: 0 0 20px #8a2be240, 0 0 40px #8a2be220, 0 0 60px #8a2be210;
+  }
+  100% {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+    box-shadow: 0 0 20px #00ffff40, 0 0 40px #00ffff20, 0 0 60px #00ffff10;
+  }
+}
+
+@keyframes neon-border-cycle {
+  0% {
+    border-color: #00ffff;
+    box-shadow: 0 0 20px #00ffff40, 0 0 40px #00ffff20, inset 0 0 20px #00ffff10;
+  }
+  16% {
+    border-color: #ff00ff;
+    box-shadow: 0 0 20px #ff00ff40, 0 0 40px #ff00ff20, inset 0 0 20px #ff00ff10;
+  }
+  33% {
+    border-color: #00ff00;
+    box-shadow: 0 0 20px #00ff0040, 0 0 40px #00ff0020, inset 0 0 20px #00ff0010;
+  }
+  50% {
+    border-color: #ffff00;
+    box-shadow: 0 0 20px #ffff0040, 0 0 40px #ffff0020, inset 0 0 20px #ffff0010;
+  }
+  66% {
+    border-color: #ff4500;
+    box-shadow: 0 0 20px #ff450040, 0 0 40px #ff450020, inset 0 0 20px #ff450010;
+  }
+  83% {
+    border-color: #8a2be2;
+    box-shadow: 0 0 20px #8a2be240, 0 0 40px #8a2be220, inset 0 0 20px #8a2be210;
+  }
+  100% {
+    border-color: #00ffff;
+    box-shadow: 0 0 20px #00ffff40, 0 0 40px #00ffff20, inset 0 0 20px #00ffff10;
+  }
+}
+
+@keyframes neon-bg-cycle {
+  0% {
+    background: linear-gradient(135deg, #00ffff20, #00ffff10);
+    box-shadow: 0 0 30px #00ffff20, inset 0 0 30px #00ffff05;
+  }
+  16% {
+    background: linear-gradient(135deg, #ff00ff20, #ff00ff10);
+    box-shadow: 0 0 30px #ff00ff20, inset 0 0 30px #ff00ff05;
+  }
+  33% {
+    background: linear-gradient(135deg, #00ff0020, #00ff0010);
+    box-shadow: 0 0 30px #00ff0020, inset 0 0 30px #00ff0005;
+  }
+  50% {
+    background: linear-gradient(135deg, #ffff0020, #ffff0010);
+    box-shadow: 0 0 30px #ffff0020, inset 0 0 30px #ffff0005;
+  }
+  66% {
+    background: linear-gradient(135deg, #ff450020, #ff450010);
+    box-shadow: 0 0 30px #ff450020, inset 0 0 30px #ff450005;
+  }
+  83% {
+    background: linear-gradient(135deg, #8a2be220, #8a2be210);
+    box-shadow: 0 0 30px #8a2be220, inset 0 0 30px #8a2be205;
+  }
+  100% {
+    background: linear-gradient(135deg, #00ffff20, #00ffff10);
+    box-shadow: 0 0 30px #00ffff20, inset 0 0 30px #00ffff05;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-neon {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Neon Effect Classes */
+.neon-text {
+  animation: neon-cycle 5s ease-in-out infinite;
+  font-weight: 600;
+}
+
+.neon-border {
+  animation: neon-border-cycle 5s ease-in-out infinite;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.neon-bg {
+  animation: neon-bg-cycle 5s ease-in-out infinite;
+}
+
+.neon-glow {
+  animation: neon-cycle 5s ease-in-out infinite;
+}
+
+.neon-pulse {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+.crypto-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating crypto symbols animations */
+@keyframes crypto-symbol-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg);
+    opacity: 0.4;
+  }
+}
+
+@keyframes crypto-symbol-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+@keyframes crypto-symbol-drift {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateX(20px) translateY(-30px) rotate(120deg);
+  }
+  66% {
+    transform: translateX(-10px) translateY(-50px) rotate(240deg);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(360deg);
+  }
+}
+
+/* Enhanced gradient effects with crypto colors */
+.gradient-text {
+  background: linear-gradient(135deg, #00ff88, #ffd700, #ff6b35, #8b5cf6, #00ff88);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: crypto-gradient-shift 6s ease-in-out infinite;
+}
+
+@keyframes crypto-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, #00ff88, #ffd700, #ff6b35, #8b5cf6, #00ff88);
+  background-size: 300% 300%;
+  padding: 2px;
+  border-radius: inherit;
+  animation: crypto-gradient-shift 6s ease-in-out infinite;
+}
+
+.gradient-border > * {
+  background: var(--background);
+  border-radius: calc(var(--radius) - 2px);
+}
+
+/* Neon button effects */
+.btn-neon {
+  position: relative;
+  overflow: hidden;
+  animation: neon-cycle 5s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+  transform: translateY(-2px);
+  animation-duration: 2s;
+}
+
+.btn-neon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-neon:hover::before {
+  left: 100%;
+}
+
+/* Crypto-specific glow effects */
+.crypto-glow-green {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3), 0 0 40px rgba(0, 255, 136, 0.1);
+  transition: all 0.3s ease;
+}
+
+.crypto-glow-green:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5), 0 0 60px rgba(0, 255, 136, 0.2);
+  transform: translateY(-2px);
+}
+
+.crypto-glow-gold {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.crypto-glow-gold:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), 0 0 60px rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.crypto-glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+  transition: all 0.3s ease;
+}
+
+.crypto-glow-purple:hover {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.crypto-pulse {
+  animation: crypto-pulse 2s ease-in-out infinite;
+}
+
+@keyframes crypto-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Bullish/Bearish specific glows */
+.crypto-glow-bullish {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), 0 0 40px rgba(0, 255, 136, 0.2);
+  transition: all 0.3s ease;
+}
+
+.crypto-glow-bullish:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.6), 0 0 60px rgba(0, 255, 136, 0.3);
+  transform: translateY(-2px);
+}
+
+.crypto-glow-bearish {
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.4), 0 0 40px rgba(255, 69, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.crypto-glow-bearish:hover {
+  box-shadow: 0 0 30px rgba(255, 69, 0, 0.6), 0 0 60px rgba(255, 69, 0, 0.3);
+  transform: translateY(-2px);
+}
